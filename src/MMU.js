@@ -1,6 +1,6 @@
 // @flow
 
-import type { Byte, Address } from './Types';
+import type { Byte, Address } from './types';
 
 // From nocash-s pandocs
 //

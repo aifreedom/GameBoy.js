@@ -1,0 +1,29 @@
+version: 2
+jobs:
+   build:
+     working_directory: ~/gbc.js
+     docker:
+       - image: circleci/node:8.1.2
+     steps:
+       - checkout
+       - run:
+           name: update-yarn
+           command: 'sudo npm install -g yarn@latest'
+       - restore_cache:
+           key: dependency-cache-{{ checksum "package.json" }}
+       - run:
+           name: 'yarn install'
+           command: 'yarn install'
+       - save_cache:
+           key: dependency-cache-{{ checksum "package.json" }}
+           paths:
+             - ./node_modules
+       - run:
+           name: 'yarn run flow-version'
+           command: 'yarn run flow-version'
+       - run:
+           name: 'yarn run flow'
+           command: 'yarn run flow'
+       - run:
+           name: 'yarn flow'
+           command: 'yarn flow'

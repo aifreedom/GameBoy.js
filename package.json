@@ -16,6 +16,7 @@
     "webpack": "^3.1.0"
   },
   "scripts": {
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "flow-version": "flow version"
   }
 }

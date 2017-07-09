@@ -19,11 +19,5 @@ jobs:
            paths:
              - ./node_modules
        - run:
-           name: 'yarn run flow-version'
-           command: 'yarn run flow-version'
-       - run:
-           name: 'yarn run flow'
-           command: 'yarn run flow'
-       - run:
            name: 'yarn flow'
            command: 'yarn flow'

@@ -13,7 +13,7 @@
     "@babel/preset-flow": "^7.0.0",
     "babel-loader": "^8.0.0",
     "flow-bin": "^0.49.1",
-    "webpack": "^3.1.0"
+    "webpack": "^5.36.2"
   },
   "scripts": {
     "build": "webpack -p"

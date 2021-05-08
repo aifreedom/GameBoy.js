@@ -19,6 +19,6 @@ jobs:
           command: yarn build
 
 workflows:
-  sample: 
+  build: 
     jobs:
       - build

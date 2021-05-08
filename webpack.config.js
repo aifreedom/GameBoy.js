@@ -4,22 +4,22 @@ const webpack = require('webpack');
 module.exports = {
   context: path.resolve(__dirname, './src'),
   entry: {
-    gameboy: './Gameboy.js',
-  },
-  output: {
-    path: path.resolve(__dirname, './dist'),
-    filename: '[name].bundle.js',
+    gameboy: './Gameboy.ts',
   },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.ts$/,
         exclude: [/node_modules/],
-        use: [{
-          loader: 'babel-loader',
-          options: { presets: ['@babel/preset-env', '@babel/preset-flow'] },
-        }],
+        use: 'ts-loader',
       },
     ],
+  },
+  resolve: {
+    extensions: ['.ts', '.js'],
+  },
+  output: {
+    path: path.resolve(__dirname, './dist'),
+    filename: '[name].bundle.js',
   },
 };

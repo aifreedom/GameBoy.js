@@ -7,15 +7,12 @@
   "author": "aifreedom",
   "license": "MIT",
   "devDependencies": {
-    "@babel/cli": "^7.0.0",
-    "@babel/core": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
-    "@babel/preset-flow": "^7.0.0",
-    "babel-loader": "^8.0.0",
-    "flow-bin": "^0.49.1",
-    "webpack": "^5.36.2"
+    "ts-loader": "^9.1.2",
+    "typescript": "^4.2.4",
+    "webpack": "^5.36.2",
+    "webpack-cli": "^4.7.0"
   },
   "scripts": {
-    "build": "webpack -p"
+    "build": "webpack --mode=production"
   }
 }

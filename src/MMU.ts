@@ -1,4 +1,4 @@
-import type { Byte, Address } from './Types';
+import type {Byte, Address} from './Types';
 
 // From nocash-s pandocs
 //
@@ -15,14 +15,22 @@ import type { Byte, Address } from './Types';
 // FF80-FFFE   High RAM (HRAM)
 // FFFF        Interrupt Enable Register
 
-const ADDR_MAX: Address = 0xFFFF;
+const ADDR_MAX: Address = 0xffff;
 
 const ADDR_ROM_LOW: Address = 0x0000;
 const ADDR_ROM_HIGH: Address = 0x8000;
 
 type AddressRange =
-  'invalid' | 'rom' | 'vram' | 'sram' | 'wram' |
-  'echo_wram' | 'oam' | 'io' | 'hram' | 'unknown';
+  | 'invalid'
+  | 'rom'
+  | 'vram'
+  | 'sram'
+  | 'wram'
+  | 'echo_wram'
+  | 'oam'
+  | 'io'
+  | 'hram'
+  | 'unknown';
 
 class MMU {
   memory: Uint8Array;
@@ -77,7 +85,5 @@ function addressRange(address: Address): AddressRange {
 
   return 'unknown';
 }
-
-
 
 export default MMU;

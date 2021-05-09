@@ -1,7 +1,6 @@
 import CPU from './CPU';
 import MMU from './MMU';
 
-class Gameboy {
-}
+class Gameboy {}
 
 export default Gameboy;

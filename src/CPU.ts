@@ -1,4 +1,3 @@
-class CPU {
-}
+class CPU {}
 
 export default CPU;

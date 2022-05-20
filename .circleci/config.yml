@@ -3,14 +3,15 @@
 version: 2.1
 
 orbs:
-  node: circleci/node@4.1
+  node: circleci/node@5.0.2
 
 jobs:
   build:
     docker:
-      - image: cimg/node:15.1
+      - image: cimg/node:18.2.0
     steps:
       - checkout
+      - run: node --version
       - node/install-packages:
           pkg-manager: yarn
       - run:

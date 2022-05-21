@@ -17,8 +17,8 @@
   },
   "scripts": {
     "build": "webpack --mode=production",
-    "start": "webpack --mode=development && webpack serve --mode=development",
-    "prettier": "prettier",
-    "prettier-check": "prettier --check"
+    "check-format": "prettier --list-different \"./**/*.{md,ts,js,json}\"",
+    "format": "prettier --write \"./**/*.{md,ts,js,json}\"",
+    "start": "webpack --mode=development && webpack serve --mode=development"
   }
 }

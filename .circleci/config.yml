@@ -15,8 +15,8 @@ jobs:
       - node/install-packages:
           pkg-manager: yarn
       - run:
-          name: Check style
-          command: yarn prettier-check .
+          name: Check format
+          command: yarn check-format
       - run:
           name: Build files
           command: yarn build
